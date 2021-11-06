@@ -3,7 +3,6 @@ package com.example.av1_backend.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.av1_backend.model.Musica;
 import com.example.av1_backend.shared.MusicaDto;
 
 public interface MusicaService {
@@ -13,12 +12,6 @@ public interface MusicaService {
     Optional<MusicaDto> obterPorId(String id);
     void removerMusica(String id);
     MusicaDto atualizarMusica(String id, MusicaDto musica);
-
-    //______________NÃO MEXI AINDA___________________
-    List<Musica> encontrarPorAno(int anoLancamento);
-    //_______________________________________________
-
-
 
 } 
 

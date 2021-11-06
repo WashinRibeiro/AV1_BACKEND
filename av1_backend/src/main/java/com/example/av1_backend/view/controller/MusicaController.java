@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.example.av1_backend.model.Musica;
 import com.example.av1_backend.service.MusicaService;
 import com.example.av1_backend.shared.MusicaDto;
 import com.example.av1_backend.view.model.MusicaRequest;
@@ -89,12 +88,5 @@ public class MusicaController {
     public long contagemMusicas() {
         return servico.contagem();
     }
-
-    //Consultar Músicas por ano
-    @GetMapping(value = "/encontrarporAno/{anoLancamento}")
-    public ResponseEntity<List<Musica>> encontrarPorAno(@PathVariable int anoLancamento) {
-        return new ResponseEntity<>(servico.encontrarPorAno(anoLancamento), HttpStatus.OK);
-    }
-     
 
 } 
